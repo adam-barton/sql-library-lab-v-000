@@ -32,7 +32,7 @@ JOIN character_books
 ON books.id = character_books.book_id
 JOIN characters
 ON character_books.character_id = characters.id
-GROUP BY series.title ORDER BY characters.species DESC;"
+GROUP BY series.title ORDER BY characters.species DESC LIMIT 1;"
 end
 
 def select_character_names_and_number_of_books_they_are_in
